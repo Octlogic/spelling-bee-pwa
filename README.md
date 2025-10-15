@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🐝 Spelling Bee Challenge - iPad PWA
 
 A fun, educational Progressive Web App designed for kids to practice spelling on iPad tablets. Features pronunciation, hints, and offline functionality.
@@ -246,3 +247,7 @@ For issues or questions:
 ---
 
 **Made with ❤️ for young spellers everywhere! 🐝📚**
+=======
+# spelling-bee-pwa
+
+>>>>>>> 9655b135d7de0ccc046584a68fc5c27a5a638069
