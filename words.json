@@ -1,0 +1,537 @@
+[
+  {
+    "word": "elephant",
+    "definition": "A large gray animal with big ears and a long trunk",
+    "grade": 6
+  },
+  {
+    "word": "butterfly",
+    "definition": "A colorful insect with large wings that flies from flower to flower",
+    "grade": 6
+  },
+  {
+    "word": "rainbow",
+    "definition": "Beautiful colored bands in the sky after rain",
+    "grade": 6
+  },
+  {
+    "word": "telephone",
+    "definition": "A device used to talk to people far away",
+    "grade": 6
+  },
+  {
+    "word": "adventure",
+    "definition": "An exciting journey or experience",
+    "grade": 6
+  },
+  {
+    "word": "dolphin",
+    "definition": "A smart marine mammal that lives in the ocean",
+    "grade": 6
+  },
+  {
+    "word": "bicycle",
+    "definition": "A two-wheeled vehicle you ride by pedaling",
+    "grade": 6
+  },
+  {
+    "word": "treasure",
+    "definition": "Valuable items like gold coins hidden away",
+    "grade": 6
+  },
+  {
+    "word": "sandwich",
+    "definition": "Food made with meat or other fillings between bread slices",
+    "grade": 6
+  },
+  {
+    "word": "octopus",
+    "definition": "A sea creature with eight long arms",
+    "grade": 6
+  },
+  {
+    "word": "triangle",
+    "definition": "A shape with three sides and three corners",
+    "grade": 6
+  },
+  {
+    "word": "calendar",
+    "definition": "A chart showing days, weeks, and months of the year",
+    "grade": 6
+  },
+  {
+    "word": "chocolate",
+    "definition": "A sweet brown candy made from cocoa beans",
+    "grade": 6
+  },
+  {
+    "word": "kangaroo",
+    "definition": "An animal that hops and carries babies in a pouch",
+    "grade": 6
+  },
+  {
+    "word": "dinosaur",
+    "definition": "A large extinct reptile that lived millions of years ago",
+    "grade": 6
+  },
+  {
+    "word": "volcano",
+    "definition": "A mountain that can shoot out hot lava and ash",
+    "grade": 6
+  },
+  {
+    "word": "penguin",
+    "definition": "A black and white bird that swims but cannot fly",
+    "grade": 6
+  },
+  {
+    "word": "giraffe",
+    "definition": "The tallest animal with a very long neck",
+    "grade": 6
+  },
+  {
+    "word": "library",
+    "definition": "A place where books are kept for people to borrow",
+    "grade": 6
+  },
+  {
+    "word": "hospital",
+    "definition": "A building where sick people go to get better",
+    "grade": 6
+  },
+  {
+    "word": "mountain",
+    "definition": "A very high hill that reaches toward the sky",
+    "grade": 6
+  },
+  {
+    "word": "computer",
+    "definition": "An electronic machine that processes information",
+    "grade": 6
+  },
+  {
+    "word": "teacher",
+    "definition": "A person who helps students learn new things",
+    "grade": 6
+  },
+  {
+    "word": "birthday",
+    "definition": "The day each year when you celebrate being born",
+    "grade": 6
+  },
+  {
+    "word": "airplane",
+    "definition": "A flying machine that carries people through the sky",
+    "grade": 6
+  },
+  {
+    "word": "medicine",
+    "definition": "Something you take to help you feel better when sick",
+    "grade": 6
+  },
+  {
+    "word": "skeleton",
+    "definition": "All the bones inside your body",
+    "grade": 6
+  },
+  {
+    "word": "vegetable",
+    "definition": "A plant food like carrots, broccoli, or corn",
+    "grade": 6
+  },
+  {
+    "word": "geography",
+    "definition": "The study of places, countries, and maps",
+    "grade": 8
+  },
+  {
+    "word": "rectangle",
+    "definition": "A shape with four sides and four right angles",
+    "grade": 7
+  },
+  {
+    "word": "butterfly",
+    "definition": "A colorful insect that starts as a caterpillar",
+    "grade": 6
+  },
+  {
+    "word": "refrigerator",
+    "definition": "A machine that keeps food cold and fresh",
+    "grade": 8
+  },
+  {
+    "word": "hamburger",
+    "definition": "A sandwich with a meat patty in a bun",
+    "grade": 7
+  },
+  {
+    "word": "calculator",
+    "definition": "A device that helps you do math problems",
+    "grade": 7
+  },
+  {
+    "word": "microscope",
+    "definition": "A tool that makes tiny things look bigger",
+    "grade": 8
+  },
+  {
+    "word": "submarine",
+    "definition": "A boat that can travel underwater",
+    "grade": 7
+  },
+  {
+    "word": "dictionary",
+    "definition": "A book that tells you what words mean",
+    "grade": 7
+  },
+  {
+    "word": "photograph",
+    "definition": "A picture taken with a camera",
+    "grade": 8
+  },
+  {
+    "word": "dangerous",
+    "definition": "Something that might cause harm or hurt you",
+    "grade": 7
+  },
+  {
+    "word": "beautiful",
+    "definition": "Something that looks very pretty or nice",
+    "grade": 6
+  },
+  {
+    "word": "enormous",
+    "definition": "Extremely large or huge in size",
+    "grade": 7
+  },
+  {
+    "word": "delicious",
+    "definition": "Food that tastes really good",
+    "grade": 7
+  },
+  {
+    "word": "intelligent",
+    "definition": "Very smart and quick to understand things",
+    "grade": 8
+  },
+  {
+    "word": "fantastic",
+    "definition": "Extremely good or wonderful",
+    "grade": 7
+  },
+  {
+    "word": "tremendous",
+    "definition": "Very great in size, amount, or strength",
+    "grade": 8
+  },
+  {
+    "word": "mysterious",
+    "definition": "Strange and hard to understand or explain",
+    "grade": 8
+  },
+  {
+    "word": "miniature",
+    "definition": "A very small version of something bigger",
+    "grade": 7
+  },
+  {
+    "word": "invisible",
+    "definition": "Something you cannot see",
+    "grade": 7
+  },
+  {
+    "word": "comfortable",
+    "definition": "Pleasant and relaxing to use or wear",
+    "grade": 8
+  },
+  {
+    "word": "temporary",
+    "definition": "Lasting for only a short time",
+    "grade": 7
+  },
+  {
+    "word": "exercise",
+    "definition": "Physical activity to keep your body healthy",
+    "grade": 7
+  },
+  {
+    "word": "opposite",
+    "definition": "Completely different from something else",
+    "grade": 7
+  },
+  {
+    "word": "yesterday",
+    "definition": "The day before today",
+    "grade": 7
+  },
+  {
+    "word": "tomorrow",
+    "definition": "The day after today",
+    "grade": 7
+  },
+  {
+    "word": "kitchen",
+    "definition": "The room where food is cooked",
+    "grade": 6
+  },
+  {
+    "word": "bedroom",
+    "definition": "A room where you sleep",
+    "grade": 6
+  },
+  {
+    "word": "bathroom",
+    "definition": "A room with a toilet and sink",
+    "grade": 6
+  },
+  {
+    "word": "basement",
+    "definition": "The lowest floor of a house, usually underground",
+    "grade": 7
+  },
+  {
+    "word": "fireplace",
+    "definition": "A place in a room where you can build a fire",
+    "grade": 7
+  },
+  {
+    "word": "ceiling",
+    "definition": "The top inside surface of a room",
+    "grade": 7
+  },
+  {
+    "word": "furniture",
+    "definition": "Things like chairs, tables, and beds in a house",
+    "grade": 7
+  },
+  {
+    "word": "blanket",
+    "definition": "A soft cover you use to keep warm in bed",
+    "grade": 6
+  },
+  {
+    "word": "pillow",
+    "definition": "A soft cushion you rest your head on",
+    "grade": 6
+  },
+  {
+    "word": "curtain",
+    "definition": "Cloth that hangs over windows",
+    "grade": 6
+  },
+  {
+    "word": "doorbell",
+    "definition": "A button that makes a sound when visitors arrive",
+    "grade": 6
+  },
+  {
+    "word": "mailbox",
+    "definition": "A box where letters and packages are delivered",
+    "grade": 6
+  },
+  {
+    "word": "sidewalk",
+    "definition": "A path for walking beside the street",
+    "grade": 6
+  },
+  {
+    "word": "neighborhood",
+    "definition": "The area where you live with nearby houses",
+    "grade": 8
+  },
+  {
+    "word": "playground",
+    "definition": "A place with swings and slides where children play",
+    "grade": 6
+  },
+  {
+    "word": "restaurant",
+    "definition": "A place where people go to eat meals",
+    "grade": 6
+  },
+  {
+    "word": "grocery",
+    "definition": "A store where you buy food and household items",
+    "grade": 6
+  },
+  {
+    "word": "mechanic",
+    "definition": "A person who fixes cars and trucks",
+    "grade": 6
+  },
+  {
+    "word": "scientist",
+    "definition": "A person who studies how things work in nature",
+    "grade": 6
+  },
+  {
+    "word": "artist",
+    "definition": "A person who creates paintings, drawings, or sculptures",
+    "grade": 6
+  },
+  {
+    "word": "musician",
+    "definition": "A person who plays instruments or sings songs",
+    "grade": 6
+  },
+  {
+    "word": "firefighter",
+    "definition": "A person who puts out fires and helps in emergencies",
+    "grade": 8
+  },
+  {
+    "word": "astronaut",
+    "definition": "A person who travels to space",
+    "grade": 8
+  },
+  {
+    "word": "veterinarian",
+    "definition": "A doctor who takes care of animals",
+    "grade": 8
+  },
+  {
+    "word": "carpenter",
+    "definition": "A person who builds things with wood",
+    "grade": 6
+  },
+  {
+    "word": "principal",
+    "definition": "The person who runs a school",
+    "grade": 8
+  },
+  {
+    "word": "secretary",
+    "definition": "A person who helps with office work and phone calls",
+    "grade": 8
+  },
+  {
+    "word": "important",
+    "definition": "Something that matters a lot",
+    "grade": 6
+  },
+  {
+    "word": "necessary",
+    "definition": "Something you must have or do",
+    "grade": 7
+  },
+  {
+    "word": "different",
+    "definition": "Not the same as something else",
+    "grade": 6
+  },
+  {
+    "word": "excellent",
+    "definition": "Extremely good or outstanding",
+    "grade": 7
+  },
+  {
+    "word": "terrible",
+    "definition": "Very bad or awful",
+    "grade": 7
+  },
+  {
+    "word": "horrible",
+    "definition": "Extremely unpleasant or bad",
+    "grade": 7
+  },
+  {
+    "word": "wonderful",
+    "definition": "Extremely good or pleasant",
+    "grade": 7
+  },
+  {
+    "word": "marvelous",
+    "definition": "Extremely good or impressive",
+    "grade": 8
+  },
+  {
+    "word": "incredible",
+    "definition": "Hard to believe because it's so amazing",
+    "grade": 8
+  },
+  {
+    "word": "possible",
+    "definition": "Something that might happen or be done",
+    "grade": 7
+  },
+  {
+    "word": "impossible",
+    "definition": "Something that cannot happen or be done",
+    "grade": 7
+  },
+  {
+    "word": "probably",
+    "definition": "Very likely to happen",
+    "grade": 7
+  },
+  {
+    "word": "definitely",
+    "definition": "Certainly or without doubt",
+    "grade": 8
+  },
+  {
+    "word": "especially",
+    "definition": "More than usual or particularly",
+    "grade": 8
+  },
+  {
+    "word": "usually",
+    "definition": "Most of the time or normally",
+    "grade": 6
+  },
+  {
+    "word": "finally",
+    "definition": "At last or after a long time",
+    "grade": 6
+  },
+  {
+    "word": "suddenly",
+    "definition": "Happening quickly without warning",
+    "grade": 7
+  },
+  {
+    "word": "immediately",
+    "definition": "Right away or at once",
+    "grade": 8
+  },
+  {
+    "word": "carefully",
+    "definition": "Done with attention to avoid mistakes",
+    "grade": 8
+  },
+  {
+    "word": "quietly",
+    "definition": "Making very little or no sound",
+    "grade": 7
+  },
+  {
+    "word": "quickly",
+    "definition": "Moving or acting with speed",
+    "grade": 6
+  },
+  {
+    "word": "slowly",
+    "definition": "Moving or acting without speed",
+    "grade": 6
+  },
+  {
+    "word": "perfectly",
+    "definition": "Done exactly right without any mistakes",
+    "grade": 8
+  },
+  {
+    "word": "completely",
+    "definition": "In every way or totally",
+    "grade": 8
+  },
+  {
+    "word": "absolutely",
+    "definition": "Completely or totally",
+    "grade": 8
+  },
+  {
+    "word": "extremely",
+    "definition": "To a very great degree",
+    "grade": 8
+  }
+]

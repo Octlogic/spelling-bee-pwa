@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Icon Generator</title>
+    <style>
+        canvas {
+            border: 1px solid #ccc;
+            margin: 10px;
+        }
+        .icon-container {
+            text-align: center;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="icon-container">
+        <h2>Generated PWA Icons</h2>
+        <p>Right-click and save these canvases as PNG files:</p>
+        
+        <div>
+            <h3>192x192 Icon</h3>
+            <canvas id="icon192" width="192" height="192"></canvas>
+            <br>
+            <button onclick="downloadIcon('icon192', '192')">Download 192x192 Icon</button>
+        </div>
+        
+        <div>
+            <h3>512x512 Icon</h3>
+            <canvas id="icon512" width="512" height="512"></canvas>
+            <br>
+            <button onclick="downloadIcon('icon512', '512')">Download 512x512 Icon</button>
+        </div>
+    </div>
+
+    <script>
+        function createBeeIcon(canvas, size) {
+            const ctx = canvas.getContext('2d');
+            const center = size / 2;
+            const scale = size / 192; // Base size 192
+            
+            // Clear canvas
+            ctx.clearRect(0, 0, size, size);
+            
+            // Background circle
+            ctx.fillStyle = '#FFE066';
+            ctx.beginPath();
+            ctx.arc(center, center, center * 0.9, 0, 2 * Math.PI);
+            ctx.fill();
+            
+            // Bee body (oval)
+            ctx.fillStyle = '#FFD700';
+            ctx.beginPath();
+            ctx.ellipse(center, center + 10 * scale, 50 * scale, 70 * scale, 0, 0, 2 * Math.PI);
+            ctx.fill();
+            
+            // Black stripes
+            ctx.fillStyle = '#000000';
+            for (let i = 0; i < 3; i++) {
+                ctx.beginPath();
+                ctx.ellipse(center, center - 20 * scale + i * 25 * scale, 45 * scale, 8 * scale, 0, 0, 2 * Math.PI);
+                ctx.fill();
+            }
+            
+            // Bee head
+            ctx.fillStyle = '#FFD700';
+            ctx.beginPath();
+            ctx.arc(center, center - 40 * scale, 30 * scale, 0, 2 * Math.PI);
+            ctx.fill();
+            
+            // Eyes
+            ctx.fillStyle = '#000000';
+            ctx.beginPath();
+            ctx.arc(center - 12 * scale, center - 45 * scale, 5 * scale, 0, 2 * Math.PI);
+            ctx.fill();
+            
+            ctx.beginPath();
+            ctx.arc(center + 12 * scale, center - 45 * scale, 5 * scale, 0, 2 * Math.PI);
+            ctx.fill();
+            
+            // Wings
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
+            
+            // Left wing
+            ctx.beginPath();
+            ctx.ellipse(center - 35 * scale, center - 15 * scale, 25 * scale, 15 * scale, -0.3, 0, 2 * Math.PI);
+            ctx.fill();
+            
+            // Right wing  
+            ctx.beginPath();
+            ctx.ellipse(center + 35 * scale, center - 15 * scale, 25 * scale, 15 * scale, 0.3, 0, 2 * Math.PI);
+            ctx.fill();
+            
+            // Antennae
+            ctx.strokeStyle = '#000000';
+            ctx.lineWidth = 3 * scale;
+            
+            ctx.beginPath();
+            ctx.moveTo(center - 8 * scale, center - 55 * scale);
+            ctx.lineTo(center - 15 * scale, center - 70 * scale);
+            ctx.stroke();
+            
+            ctx.beginPath();
+            ctx.moveTo(center + 8 * scale, center - 55 * scale);
+            ctx.lineTo(center + 15 * scale, center - 70 * scale);
+            ctx.stroke();
+            
+            // Antennae dots
+            ctx.fillStyle = '#000000';
+            ctx.beginPath();
+            ctx.arc(center - 15 * scale, center - 70 * scale, 3 * scale, 0, 2 * Math.PI);
+            ctx.fill();
+            
+            ctx.beginPath();
+            ctx.arc(center + 15 * scale, center - 70 * scale, 3 * scale, 0, 2 * Math.PI);
+            ctx.fill();
+        }
+        
+        function downloadIcon(canvasId, size) {
+            const canvas = document.getElementById(canvasId);
+            const link = document.createElement('a');
+            link.download = `icon-${size}.png`;
+            link.href = canvas.toDataURL();
+            link.click();
+        }
+        
+        // Generate icons when page loads
+        window.onload = function() {
+            createBeeIcon(document.getElementById('icon192'), 192);
+            createBeeIcon(document.getElementById('icon512'), 512);
+        };
+    </script>
+</body>
+</html>

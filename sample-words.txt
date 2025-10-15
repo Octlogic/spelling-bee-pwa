@@ -1,0 +1,15 @@
+spaceship (7) - A vehicle that travels through space
+telescope (7) - An instrument for looking at distant objects
+astronomer (8) - A person who studies stars and planets
+constellation (8) - A group of stars that forms a pattern
+satellite (7) - An object that orbits around a planet
+universe (7) - All of space and everything in it
+gravity (6) - The force that pulls objects toward Earth
+planet (6) - A large object that orbits around a star
+meteor (7) - A space rock that burns up in Earth's atmosphere
+galaxy (7) - A huge group of billions of stars
+comet (6) - A space object with a bright tail
+asteroid (8) - A rocky object that orbits the sun
+orbit (6) - The path an object takes around another object
+lunar (7) - Related to the moon
+solar (6) - Related to the sun

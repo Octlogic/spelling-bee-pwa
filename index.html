@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Spelling Bee">
+    
+    <title>Spelling Bee - Kids Learning App</title>
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Icons for different devices -->
+    <link rel="icon" type="image/svg+xml" href="icons/icon.svg">
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="icons/icon-512.png">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>🐝 Spelling Bee Challenge 🐝</h1>
+    </header>
+
+    <main>
+        <!-- Welcome Screen -->
+        <section id="welcome-screen" class="screen active">
+            <div class="welcome-content">
+                <div class="bee-logo">🐝</div>
+                <h2>Ready to Practice Spelling?</h2>
+                <p>Choose your grade level and test your spelling skills!</p>
+                
+                <div class="grade-selection">
+                    <h3>Select Grade Level:</h3>
+                    <div class="grade-buttons">
+                        <button class="grade-btn active" data-grade="all">All Grades</button>
+                        <button class="grade-btn" data-grade="6">6th Grade</button>
+                        <button class="grade-btn" data-grade="7">7th Grade</button>
+                        <button class="grade-btn" data-grade="8">8th Grade</button>
+                    </div>
+                </div>
+                
+                <div class="file-upload-section">
+                    <h3>📁 Upload Your Word List (Optional):</h3>
+                    <input type="file" id="word-file-input" accept=".pdf,.md,.txt,.json" style="display: none;">
+                    <button id="upload-btn" class="secondary-btn">📁 Upload Word File</button>
+                    <div id="upload-status" class="upload-status"></div>
+                </div>
+                
+                <button id="start-btn" class="primary-btn">Start Spelling Bee</button>
+            </div>
+        </section>
+
+        <!-- Quiz Screen -->
+        <section id="quiz-screen" class="screen">
+            <div class="quiz-header">
+                <div class="progress-info">
+                    <span id="question-counter">Question 1 of 15</span>
+                    <span id="score-display">Score: 0</span>
+                </div>
+            </div>
+            
+            <div class="word-section">
+                <button id="play-word-btn" class="play-btn" aria-label="Play word pronunciation">
+                    🔊 Listen to the Word
+                </button>
+            </div>
+            
+            <div class="input-section">
+                <label for="spelling-input">Type your spelling:</label>
+                <input type="text" id="spelling-input" placeholder="Enter the word here..." autocomplete="off" autocorrect="off" spellcheck="false">
+            </div>
+            
+            <div class="action-buttons">
+                <button id="hint-btn" class="secondary-btn">💡 Need a Hint?</button>
+                <button id="submit-btn" class="primary-btn">Submit Answer</button>
+            </div>
+            
+            <div id="feedback" class="feedback" aria-live="assertive"></div>
+        </section>
+
+        <!-- Results Screen -->
+        <section id="results-screen" class="screen">
+            <div class="results-content">
+                <div class="final-score">
+                    <h2>Great Job! 🎉</h2>
+                    <div class="score-circle">
+                        <span id="final-score">0</span>
+                        <span class="score-label">out of 15</span>
+                    </div>
+                    <div id="encouragement-message"></div>
+                </div>
+                <button id="play-again-btn" class="primary-btn">Play Again</button>
+                <button id="home-btn" class="secondary-btn">Back to Home</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Hint Modal -->
+    <div id="hint-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" aria-label="Close hint">&times;</span>
+            <h3>Word Meaning:</h3>
+            <p id="hint-text"></p>
+            <button id="close-hint-btn" class="secondary-btn">Got It!</button>
+        </div>
+    </div>
+
+    <!-- Loading indicator -->
+    <div id="loading" class="loading">
+        <div class="spinner"></div>
+        <p>Loading words...</p>
+    </div>
+
+    <!-- Scripts -->
+    <script src="file-processor.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
