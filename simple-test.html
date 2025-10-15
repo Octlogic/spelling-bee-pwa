@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple CSV Test</title>
+</head>
+<body>
+    <h1>CSV Test</h1>
+    <button onclick="test()">Test CSV Parsing</button>
+    <div id="result"></div>
+
+    <script>
+        async function test() {
+            try {
+                const response = await fetch('./src/data/spelling_bee_words.csv');
+                const csvText = await response.text();
+                
+                const lines = csvText.split('\n');
+                const words = [];
+                
+                console.log('Lines found:', lines.length);
+                
+                for (let i = 1; i < Math.min(lines.length, 10); i++) { // Test first 10 lines
+                    const line = lines[i].trim();
+                    if (line) {
+                        console.log(`Line ${i}:`, line);
+                        const parts = line.split(',');
+                        
+                        if (parts.length >= 4) {
+                            const word = parts[1]?.trim();
+                            const definition = parts.slice(3).join(',').replace(/^"|"$/g, '').trim();
+                            
+                            if (word && word.length > 1 && /^[a-zA-Z][a-zA-Z\s'-]*$/.test(word)) {
+                                words.push({ word, definition });
+                                console.log('Added word:', word);
+                            }
+                        }
+                    }
+                }
+                
+                document.getElementById('result').innerHTML = `
+                    <h2>Found ${words.length} words:</h2>
+                    <ul>
+                        ${words.map(w => `<li><strong>${w.word}</strong>: ${w.definition}</li>`).join('')}
+                    </ul>
+                `;
+                
+            } catch (error) {
+                console.error('Error:', error);
+                document.getElementById('result').innerHTML = 'Error: ' + error.message;
+            }
+        }
+    </script>
+</body>
+</html>

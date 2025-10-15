@@ -111,35 +111,28 @@ class SpellingBeeApp {
         const lines = csvText.split('\n');
         const words = [];
         
-        console.log('Parsed', lines.length, 'lines from CSV');
+        console.log('Parsing CSV with', lines.length, 'lines');
         
-        // Skip header row if present
-        const startIndex = lines[0] && lines[0].toLowerCase().includes('word') ? 1 : 0;
-        
-        for (let i = startIndex; i < lines.length; i++) {
+        for (let i = 1; i < lines.length; i++) { // Skip header
             const line = lines[i].trim();
             if (line) {
-                // Handle CSV parsing with potential commas in quoted fields
-                // Format: Number,Word,Part of Speech,Definition,Alternate Spelling
-                const matches = line.match(/(?:"([^"]*(?:""[^"]*)*)"|([^,]*))/g);
-                if (matches && matches.length >= 4) {
-                    const number = matches[0]?.replace(/^"|"$/g, '').trim(); // Skip the number column
-                    const word = matches[1]?.replace(/^"|"$/g, '').trim();
-                    const partOfSpeech = matches[2]?.replace(/^"|"$/g, '').trim();
-                    const definition = matches[3]?.replace(/^"|"$/g, '').trim();
-                    const alternateSpelling = matches.length > 4 ? matches[4]?.replace(/^"|"$/g, '').trim() : '';
+                // Simple split approach - assume no commas in quoted fields for now
+                const parts = line.split(',');
+                
+                if (parts.length >= 4) {
+                    const number = parts[0]?.trim();
+                    const word = parts[1]?.trim();
+                    const partOfSpeech = parts[2]?.trim();
+                    // Join remaining parts for definition (in case of commas)
+                    const definition = parts.slice(3).join(',').replace(/^"|"$/g, '').trim();
                     
-                    // Only include actual words (not numbers or empty)
-                    if (word && this.isValidWord(word)) {
-                        // Assign grade based on word length and complexity
-                        const grade = this.estimateGrade(word);
+                    if (word && word.length > 1 && /^[a-zA-Z][a-zA-Z\s'-]*$/.test(word)) {
+                        const grade = Math.min(5, Math.max(1, Math.floor(word.length / 2)));
                         
                         words.push({
                             word: word.toLowerCase(),
                             grade: grade,
-                            definition: definition || 'A word to spell',
-                            partOfSpeech: partOfSpeech || '',
-                            alternateSpelling: alternateSpelling || ''
+                            definition: definition || 'A word to spell'
                         });
                     }
                 }
@@ -148,49 +141,6 @@ class SpellingBeeApp {
         
         console.log(`Loaded ${words.length} valid words from CSV`);
         return words;
-    }
-    
-    // Check if the input is a valid word (not a number)
-    isValidWord(word) {
-        // Remove any extra whitespace and quotes
-        const cleanWord = word.trim().replace(/^"|"$/g, '');
-        
-        // Check if it's empty
-        if (!cleanWord) return false;
-        
-        // Check if it's purely numeric (including decimals)
-        if (/^\d+(\.\d+)?$/.test(cleanWord)) return false;
-        
-        // Check if it starts with a number
-        if (/^\d/.test(cleanWord)) return false;
-        
-        // Check if it contains only letters, hyphens, apostrophes, and spaces (valid word characters)
-        if (!/^[a-zA-Z][a-zA-Z'\-\s]*$/.test(cleanWord)) return false;
-        
-        // Must be at least 2 characters long
-        if (cleanWord.length < 2) return false;
-        
-        return true;
-    }
-    
-    // Estimate grade level based on word characteristics
-    estimateGrade(word) {
-        const length = word.length;
-        
-        // Very simple words (2-3 letters)
-        if (length <= 3) return 1;
-        
-        // Simple words (4-5 letters)
-        if (length <= 5) return 2;
-        
-        // Medium words (6-7 letters)
-        if (length <= 7) return 3;
-        
-        // Longer words (8-9 letters)
-        if (length <= 9) return 4;
-        
-        // Complex words (10+ letters)
-        return 5;
     }
     
     initSpeechSynthesis() {
