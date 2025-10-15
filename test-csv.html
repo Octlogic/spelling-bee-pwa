@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSV Parser Test</title>
+</head>
+<body>
+    <h1>CSV Parser Test</h1>
+    <button onclick="testParser()">Test CSV Parser</button>
+    <div id="results"></div>
+
+    <script>
+        // Test the CSV parsing functionality
+        function testParser() {
+            // Sample CSV line from your file
+            const testLine = '2,warlock,noun,"one given to black magic : sorcerer, wizard",';
+            
+            // Parse it
+            const matches = testLine.match(/(?:"([^"]*(?:""[^"]*)*)"|([^,]*))/g);
+            console.log('Matches:', matches);
+            
+            if (matches && matches.length >= 4) {
+                const number = matches[0]?.replace(/^"|"$/g, '').trim();
+                const word = matches[1]?.replace(/^"|"$/g, '').trim();
+                const partOfSpeech = matches[2]?.replace(/^"|"$/g, '').trim();
+                const definition = matches[3]?.replace(/^"|"$/g, '').trim();
+                const alternateSpelling = matches.length > 4 ? matches[4]?.replace(/^"|"$/g, '').trim() : '';
+                
+                const result = {
+                    number,
+                    word,
+                    partOfSpeech,
+                    definition,
+                    alternateSpelling,
+                    isValidWord: isValidWord(word)
+                };
+                
+                document.getElementById('results').innerHTML = '<pre>' + JSON.stringify(result, null, 2) + '</pre>';
+            }
+        }
+        
+        // Check if the input is a valid word (not a number)
+        function isValidWord(word) {
+            // Remove any extra whitespace and quotes
+            const cleanWord = word.trim().replace(/^"|"$/g, '');
+            
+            // Check if it's empty
+            if (!cleanWord) return false;
+            
+            // Check if it's purely numeric (including decimals)
+            if (/^\d+(\.\d+)?$/.test(cleanWord)) return false;
+            
+            // Check if it starts with a number
+            if (/^\d/.test(cleanWord)) return false;
+            
+            // Check if it contains only letters, hyphens, apostrophes (valid word characters)
+            if (!/^[a-zA-Z][a-zA-Z'\-\s]*$/.test(cleanWord)) return false;
+            
+            // Must be at least 2 characters long
+            if (cleanWord.length < 2) return false;
+            
+            return true;
+        }
+    </script>
+</body>
+</html>
