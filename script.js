@@ -111,8 +111,10 @@ class SpellingBeeApp {
         const lines = csvText.split('\n');
         const words = [];
         
+        console.log('Parsed', lines.length, 'lines from CSV');
+        
         // Skip header row if present
-        const startIndex = lines[0].toLowerCase().includes('word') ? 1 : 0;
+        const startIndex = lines[0] && lines[0].toLowerCase().includes('word') ? 1 : 0;
         
         for (let i = startIndex; i < lines.length; i++) {
             const line = lines[i].trim();
@@ -162,7 +164,7 @@ class SpellingBeeApp {
         // Check if it starts with a number
         if (/^\d/.test(cleanWord)) return false;
         
-        // Check if it contains only letters, hyphens, apostrophes (valid word characters)
+        // Check if it contains only letters, hyphens, apostrophes, and spaces (valid word characters)
         if (!/^[a-zA-Z][a-zA-Z'\-\s]*$/.test(cleanWord)) return false;
         
         // Must be at least 2 characters long
